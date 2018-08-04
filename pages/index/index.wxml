@@ -1,3 +1,7 @@
-<view>
-    <text>hello world</text>
+<view class="container">
+    <image id="headimg" src="/images/headimg.jpg"></image>
+    <text class="username">hello world </text>
+    <view class="logview">
+        <text class="logtext">Log in</text>
+    </view>
 </view>
