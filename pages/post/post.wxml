@@ -1,0 +1,10 @@
+<!--pages/post/post.wxml-->
+<view>
+    <swiper style="width:100%;height:400rpx" indicator-dots='true' autoplay='true' interval='3000' circular='true'>
+      <swiper-item>
+        <image src="/images/swiper1.jpg" style="width:100%;height:100%"></image>
+      </swiper-item>
+      <swiper-item><image src="/images/swiper2.jpg"></image></swiper-item>
+      <swiper-item><image src="/images/swiper3.jpg"></image></swiper-item>
+    </swiper>
+</view>
