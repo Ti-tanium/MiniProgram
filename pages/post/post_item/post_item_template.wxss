@@ -1,0 +1,66 @@
+.post-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #ededed;
+  border-top: 1px solid #ededed;
+  padding-bottom: 5px;
+
+}
+
+.post-author-date{
+  margin:10rpx 0 20rpx 10rpx;
+  height:106rpx;
+  
+}
+
+.post-date{
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+
+.headimg{
+  line-height: 106rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  vertical-align: middle;
+}
+
+.post-record{
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  line-height: 16px;
+  margin-left: 10px;
+}
+
+.icon{
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle
+}
+
+.count{
+  color:#666;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.post-image{
+  width: 100%;
+  height: 340rpx;
+  margin: auto 0;
+  margin-bottom: 15px;
+}
+.post-content{
+  color: #666;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  letter-spacing: 2rpx;
+  line-height: 40rpx;
+}
