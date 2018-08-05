@@ -12,7 +12,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var post_content1={
+    var post_content=[
+    {
       author_img:"/images/headimg.jpg",
       date:"Sep 8 2018",
       content_img:"/images/swiper1.jpg",
@@ -21,8 +22,21 @@ Page({
       collect_count:96,
       view_img:"/images/View.png",
       view_count:65
+    },
+    {
+      author_img: "/images/headimg.jpg",
+      date: "Sep 8 2018",
+      content_img: "/images/zhangjiajie.jpg",
+      content: "张家界市的地层复杂多样，造化了当地的特色景观。主要有山地、岩溶、丘陵、岗地和平原等，山地面积占总面积的76%，其中最具特色的是石英砂岩峰林地貌，为世界罕见。城市地势西北高，沿澧水向东南倾斜。",
+      collect_img: "/images/Favorites.png",
+      collect_count: 96,
+      view_img: "/images/View.png",
+      view_count: 65
     }
-    this.setData(post_content1);
+    ]
+    this.setData({
+      post_key:post_content
+    });
   },
 
   /**

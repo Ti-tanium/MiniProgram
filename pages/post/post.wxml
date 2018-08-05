@@ -9,21 +9,22 @@
       <swiper-item><image src="/images/swiper3.jpg"></image></swiper-item>
     </swiper>
 
+  <block wx:for="{{post_key}}" wx:for-item="it">
     <view class="post-container">
       <view class="post-author-date">
-        <image class="headimg" src="{{author_img}}"></image>
-        <text class="post-date">{{date}}</text>
+        <image class="headimg" src="{{it.author_img}}"></image>
+        <text class="post-date">{{it.date}}</text>
       </view>
-      <image class="post-image" src="{{content_img}}"></image>
-      <text class="post-content">{{content}}</text>
+      <image class="post-image" src="{{it.content_img}}"></image>
+      <text class="post-content">{{it.content}}</text>
       <view class="post-record">
-        <image class="icon" src="{{collect_img}}"></image>
-        <text class="count">{{collect_count}}</text>
-        <image class="icon" src="{{view_img}}"></image>
-        <text class="count">{{view_count}}</text>
+        <image class="icon" src="{{it.collect_img}}"></image>
+        <text class="count">{{it.collect_count}}</text>
+        <image class="icon" src="{{it.view_img}}"></image>
+        <text class="count">{{it.view_count}}</text>
       </view>
     </view>
-
+  </block>
 
 
 </view>
