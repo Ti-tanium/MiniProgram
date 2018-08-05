@@ -1,7 +1,7 @@
 <view class="container">
     <image id="headimg" src="/images/headimg.jpg"></image>
     <text class="username">hello world </text>
-    <view class="logview">
+    <view class="logview" bindtap="onTap">
         <text class="logtext">start</text>
     </view>
 </view>
