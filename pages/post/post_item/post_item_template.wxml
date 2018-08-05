@@ -1,0 +1,16 @@
+<template name="postItem">
+  <view class="post-container">
+    <view class="post-author-date">
+      <image class="headimg" src="{{it.author_img}}"></image>
+      <text class="post-date">{{it.date}}</text>
+    </view>
+    <image class="post-image" src="{{it.content_img}}"></image>
+    <text class="post-content">{{it.content}}</text>
+    <view class="post-record">
+      <image class="icon" src="{{it.collect_img}}"></image>
+      <text class="count">{{it.collect_count}}</text>
+      <image class="icon" src="{{it.view_img}}"></image>
+      <text class="count">{{it.view_count}}</text>
+    </view>
+  </view>
+</template>
