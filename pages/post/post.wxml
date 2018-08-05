@@ -1,5 +1,6 @@
 <!--pages/post/post.wxml-->
 <view>
+
     <swiper style="width:100%;height:400rpx" indicator-dots='true' autoplay='true' interval='3000' circular='true'>
       <swiper-item>
         <image src="/images/swiper1.jpg" style="width:100%;height:100%"></image>
@@ -10,32 +11,19 @@
 
     <view class="post-container">
       <view class="post-author-date">
-        <image class="headimg" src="/images/headimg.jpg"></image>
-        <text class="post-date">Aug 5 2018</text>
+        <image class="headimg" src="{{author_img}}"></image>
+        <text class="post-date">{{date}}</text>
       </view>
-      <image class="post-image" src="/images/swiper1.jpg"></image>
-      <text class="post-content">洞庭湖区位于长江中游荆江南岸，跨湘、鄂两省。包括荆江河段以南，湘、资、沅、澧四水控制站以下的广大平原、湖泊水网区。洞庭湖南近湘阴县、益阳市，北抵华容县、安乡县、南县，东滨岳阳市、汨罗市，西至澧县。在北纬27°39′~29°51′；东经111°19′~113°34′之间。</text>
+      <image class="post-image" src="{{content_img}}"></image>
+      <text class="post-content">{{content}}</text>
       <view class="post-record">
-        <image class="icon" src="/images/Favorites.png"></image>
-        <text class="count">96</text>
-        <image class="icon" src="/images/View.png"></image>
-        <text class="count">65</text>
+        <image class="icon" src="{{collect_img}}"></image>
+        <text class="count">{{collect_count}}</text>
+        <image class="icon" src="{{view_img}}"></image>
+        <text class="count">{{view_count}}</text>
       </view>
     </view>
 
-    <view class="post-container">
-      <view class="post-author-date">
-        <image class="headimg" src="/images/headimg.jpg"></image>
-        <text class="post-date">Aug 5 2018</text>
-      </view>
-      <image class="post-image" src="/images/swiper1.jpg"></image>
-      <text class="post-content">洞庭湖区位于长江中游荆江南岸，跨湘、鄂两省。包括荆江河段以南，湘、资、沅、澧四水控制站以下的广大平原、湖泊水网区。洞庭湖南近湘阴县、益阳市，北抵华容县、安乡县、南县，东滨岳阳市、汨罗市，西至澧县。在北纬27°39′~29°51′；东经111°19′~113°34′之间。</text>
-      <view class="post-record">
-        <image class="icon" src="/images/Favorites.png"></image>
-        <text class="count">96</text>
-        <image class="icon" src="/images/View.png"></image>
-        <text class="count">65</text>
-      </view>
-    </view>
+
 
 </view>
