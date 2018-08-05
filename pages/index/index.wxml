@@ -2,6 +2,6 @@
     <image id="headimg" src="/images/headimg.jpg"></image>
     <text class="username">hello world </text>
     <view class="logview">
-        <text class="logtext">Log in</text>
+        <text class="logtext">start</text>
     </view>
 </view>
