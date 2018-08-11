@@ -40,6 +40,12 @@
 					"name": "post",
 					"pathName": "pages/post/post",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "postdetail",
+					"pathName": "pages/post/post-detail/post-detail",
+					"query": ""
 				}
 			]
 		}

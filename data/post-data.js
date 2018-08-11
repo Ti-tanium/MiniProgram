@@ -7,7 +7,8 @@ var post_content = [
     collect_img: "/images/Favorites.png",
     collect_count: 96,
     view_img: "/images/View.png",
-    view_count: 65
+    view_count: 65,
+    post_id:0
   },
   {
     author_img: "/images/headimg.jpg",
@@ -17,8 +18,8 @@ var post_content = [
     collect_img: "/images/Favorites.png",
     collect_count: 96,
     view_img: "/images/View.png",
-    view_count: 65
-
+    view_count: 65,
+    post_id:1
   },
   {
     author_img: "/images/user1.jpg",
@@ -28,7 +29,8 @@ var post_content = [
     collect_img: "/images/Favorites.png",
     collect_count: 96,
     view_img: "/images/View.png",
-    view_count: 65
+    view_count: 65,
+    post_id:2
   },
   {
     author_img: "/images/user2.jpg",
@@ -38,7 +40,8 @@ var post_content = [
     collect_img: "/images/Favorites.png",
     collect_count: 96,
     view_img: "/images/View.png",
-    view_count: 65
+    view_count: 65,
+    post_id:3
   },
   {
     author_img: "/images/user3.jpg",
@@ -48,7 +51,8 @@ var post_content = [
     collect_img: "/images/Favorites.png",
     collect_count: 96,
     view_img: "/images/View.png",
-    view_count: 65
+    view_count: 65,
+    post_id:4
   },
   {
     author_img: "/images/user4.jpg",
@@ -58,7 +62,8 @@ var post_content = [
     collect_img: "/images/Favorites.png",
     collect_count: 96,
     view_img: "/images/View.png",
-    view_count: 65
+    view_count: 65,
+    post_id:5
   }
 ]
 

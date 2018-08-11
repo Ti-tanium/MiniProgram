@@ -1,0 +1,23 @@
+<!--pages/post/post-detail/post-detail.wxml-->
+<view id="container">
+  <image src="/images/maerdaifu.jpg" id="pic"></image>
+  <image src="/images/play.png" class="playimg"></image>
+  <view id="author-date">
+    <image src="/images/user3.jpg" id="avator"></image>
+    <text id="author">Lady Gaga</text>
+    <text class="const-text">发表于</text>
+    <text id="date">3天前</text>
+  </view>
+  <text class="title">马尔代夫风景</text>
+  <view class="tool">
+    <view class="iconView">
+      <image src="/images/Bookmark.ico" class="icon"></image>
+      <image src="/images/share.ico" id="share" class="icon"></image>
+    </view>
+    <view id="splitLine"></view>
+  </view>
+  <text id="content">历史记载马尔代夫起源于12世纪，但文学作品和考古却发现马尔代夫的历史可追溯到先伊斯兰教时代。马尔代夫曾是那些出海远航的伟大探索家们的中转站，这远远早于欧洲航海史。
+第一次提到马尔代夫是在二世纪希腊天文学家、数学家和地理学家托勒密的著作中，其中他提到了斯里兰卡西面1378个小岛的地方，指的就是马尔代夫。自从那时起，许多航海家不断提及马尔代夫：14世纪末的Pappus Alexandria提到了Taprobane岛和1370个相邻的岛屿。底比斯人Scholasticus曾航行到印度马拉巴尔海岸，他提到了“一千个小岛和那里险恶的环境：因为那里的磁石海岸会导致铁皮船的触礁沉没”。
+波斯商人Suleiman曾横跨印度洋，他写道：“在这个名为Herkend的洋面上有将近1900个岛屿，统治者是一个女人，财富不可记数”。他还曾跟随郑和的远航队在1433年到达东非，他在他的海岸调查中证实，商船来到马尔代夫进行贸易，购买这里的绳子。明朝时，中国人非常熟悉这些岛屿，称这里为“伏在水下的山脉”（流沙），并记载了这里的气候、地理和风土人情。 [9] 
+14世纪中叶，阿拉伯著名的旅行家伊本·巴图塔到达马尔代夫，详细地描述了当地的风土人情。</text>
+</view>
