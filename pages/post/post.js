@@ -69,8 +69,9 @@ Page({
   },
 
   onPostTap:function(event){
+    var postId=event.currentTarget.dataset.postid;
     wx.navigateTo({
-      url: '/pages/post/post-detail/post-detail',
+      url: '/pages/post/post-detail/post-detail?id='+postId,
       success: function(res) {},
       fail: function(res) {},
       complete: function(res) {},

@@ -1,18 +1,26 @@
 // pages/post/post-detail/post-detail.js
+var postsData=require('../../../data/post-data.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    //获取传过来的id，这里的id就是url中的id
+    var postId=options.id;
+    var postData=postsData.postlist[postId];
+    //数据绑定
+    //this.data.postData=postData;
+    this.setData({
+      postData:postData
+    });
   },
 
   /**
