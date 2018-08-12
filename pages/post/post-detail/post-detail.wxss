@@ -74,8 +74,8 @@
 }
 
 .icon{
-  height: 36rpx;
-  width: 36rpx;
+  height: 40rpx;
+  width: 40rpx;
   margin-left: 40rpx;
   
 }
