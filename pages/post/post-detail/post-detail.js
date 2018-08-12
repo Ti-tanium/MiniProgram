@@ -89,10 +89,17 @@ Page({
   onBookmarkTap:function(event){
     var postsCollected=wx.getStorageSync("collect_state");
     var postCollected=postsCollected[this.data.postId];
-    postsCollected[this.data.postId]=!postCollected;
+    postCollected=!postCollected;
+    postsCollected[this.data.postId]=postCollected;
     wx.setStorageSync("collect_state",postsCollected);
     this.setData({
-      collected:!postCollected
+      collected:postCollected
     })
+    
+      wx.showToast({
+        title:postCollected? '收藏成功':'取消成功',
+        duration:1000
+      })
+    
   }
 })
