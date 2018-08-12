@@ -15,12 +15,26 @@ Page({
   onLoad: function (options) {
     //获取传过来的id，这里的id就是url中的id
     var postId=options.id;
+    this.data.postId=postId;
     var postData=postsData.postlist[postId];
     //数据绑定
     //this.data.postData=postData;
     this.setData({
       postData:postData
     });
+
+    var posts_collect_state=wx.getStorageSync("collect_state");
+    if(posts_collect_state){
+      var collected = posts_collect_state[postId];
+      this.setData({
+        collected:collected
+      });
+    }
+    else{
+      var posts_collect_state={};
+      posts_collect_state[postId]=false;
+      wx.setStorageSync("collect_state", posts_collect_state)
+    }
   },
 
   /**
@@ -70,5 +84,15 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  onBookmarkTap:function(event){
+    var postsCollected=wx.getStorageSync("collect_state");
+    var postCollected=postsCollected[this.data.postId];
+    postsCollected[this.data.postId]=!postCollected;
+    wx.setStorageSync("collect_state",postsCollected);
+    this.setData({
+      collected:!postCollected
+    })
   }
 })

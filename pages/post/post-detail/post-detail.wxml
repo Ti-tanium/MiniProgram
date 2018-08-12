@@ -11,7 +11,8 @@
   <text class="title">{{postData.title}}</text>
   <view class="tool">
     <view class="iconView">
-      <image src="/images/Bookmark.ico" class="icon"></image>
+      <image wx:if="{{collected}}" catchtap="onBookmarkTap" src="/images/bookmark_selected.png" class="icon"></image>
+      <image wx:else catchtap="onBookmarkTap" src="/images/bookmark.png" class="icon"></image>
       <image src="/images/share.ico" id="share" class="icon"></image>
     </view>
     <view id="splitLine"></view>
