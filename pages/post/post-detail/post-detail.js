@@ -101,5 +101,25 @@ Page({
         duration:1000
       })
     
+  },
+
+  onShareTap:function(event){
+    var itemList = [
+      "分享给微信好友",
+      "分享到朋友圈",
+      "分享给QQ好友",
+      "分享到微博"
+    ]
+    
+    wx.showActionSheet({
+      itemList:itemList,
+      success:function(res){
+        console.log(res.tapIndex);
+        wx.showModal({
+          title: '用户'+itemList[res.tapIndex],
+          content: '暂无分享功能（点击取消？'+res.cancel+')',
+        })
+      }
+    })
   }
 })

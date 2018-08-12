@@ -2,6 +2,8 @@
 <view id="container">
   <image src="{{postData.content_img}}" id="pic"></image>
   <image src="/images/play.png" class="playimg"></image>
+  <image src="/images/pause.png" class="playimg"></image>
+  
   <view id="author-date">
     <image src="{{postData.author_img}}" id="avator"></image>
     <text id="author">{{postData.author}}</text>
@@ -13,7 +15,7 @@
     <view class="iconView">
       <image wx:if="{{collected}}" catchtap="onBookmarkTap" src="/images/bookmark_selected.png" class="icon"></image>
       <image wx:else catchtap="onBookmarkTap" src="/images/bookmark.png" class="icon"></image>
-      <image src="/images/share.ico" id="share" class="icon"></image>
+      <image catchtap="onShareTap" src="/images/share.ico" id="share" class="icon"></image>
     </view>
     <view id="splitLine"></view>
   </view>
