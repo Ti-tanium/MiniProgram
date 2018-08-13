@@ -1,0 +1,17 @@
+<import src="../movie_grid_template/movie_grid.wxml" />
+<template name="movieList">
+  <view>
+    <view>
+      <text>正在热映</text>
+      <view>
+        <text>更多</text>
+        <image src="/images/icon/arrow-right.png"></image>
+      </view>
+    </view>
+    <view>
+      <template is="movieGrid" />
+      <template is="movieGrid" />
+      <template is="movieGrid" />
+    </view>
+  </view>
+</template>

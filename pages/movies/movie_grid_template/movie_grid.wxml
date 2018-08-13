@@ -1,0 +1,8 @@
+<import src="../stars_template/stars.wxml"/>
+<template name="movieGrid">
+  <view class="container">
+    <image class="moviePic" src="/images/复仇者联盟3.jpg"></image>
+    <text class="movieName">复仇者联盟3</text>
+    <template is="stars" />
+  </view>
+</template>
