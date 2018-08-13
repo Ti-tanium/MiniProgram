@@ -15,7 +15,7 @@
     <view class="iconView">
       <image wx:if="{{collected}}" catchtap="onBookmarkTap" src="/images/bookmark_selected.png" class="icon"></image>
       <image wx:else catchtap="onBookmarkTap" src="/images/bookmark.png" class="icon"></image>
-      <image catchtap="onShareTap" src="/images/share.ico" id="share" class="icon"></image>
+      <image catchtap="onShareTap" src="/images/share.png" id="share" class="icon"></image>
     </view>
     <view id="splitLine"></view>
   </view>
