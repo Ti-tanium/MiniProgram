@@ -1,8 +1,8 @@
 <!--pages/post/post-detail/post-detail.wxml-->
 <view id="container">
   <image src="{{postData.content_img}}" id="pic"></image>
-  <image src="/images/play.png" class="playimg"></image>
-  <image src="/images/pause.png" class="playimg"></image>
+  <image wx:if="{{play}}" catchtap='onPlayTap' src="/images/pause.png" class="playimg"></image>
+  <image wx:else catchtap='onPauseTap' src="/images/play.png" class="playimg"></image>
   
   <view id="author-date">
     <image src="{{postData.author_img}}" id="avator"></image>
