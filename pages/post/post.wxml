@@ -2,15 +2,15 @@
 <import src="post_item/post_item_template.wxml" />
 
 <view>
-  <swiper style="width:100%;height:400rpx" indicator-dots='true' autoplay='true' interval='3000' circular='true'>
+  <swiper catchtap="onSwiperTap" style="width:100%;height:400rpx" indicator-dots='true' autoplay='true' interval='3000' circular='true'>
     <swiper-item >
-      <image catchtap="onSwiperTap" src="/images/zhangjiajie.jpg" data-postid="1" class="swiper_image"></image>
+      <image  src="/images/zhangjiajie.jpg" data-postid="1" class="swiper_image"></image>
     </swiper-item>
     <swiper-item>
-      <image catchtap="onSwiperTap" src="/images/maerdaifu.jpg"  data-postid="5" class="swiper_image"></image>
+      <image src="/images/maerdaifu.jpg"  data-postid="5" class="swiper_image"></image>
     </swiper-item>
     <swiper-item>
-      <image catchtap="onSwiperTap" src="/images/fenghuang.jpg"  data-postid="2" class="swiper_image"></image>
+      <image src="/images/fenghuang.jpg"  data-postid="2" class="swiper_image"></image>
     </swiper-item>
   </swiper>
 

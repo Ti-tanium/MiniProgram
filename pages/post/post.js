@@ -78,7 +78,7 @@ Page({
     })    
   },
   onSwiperTap:function(event){
-    var postId=event.currentTarget.dataset.postid;
+    var postId=event.target.dataset.postid;
     wx.navigateTo({
       url: '/pages/post/post-detail/post-detail?id=' + postId,
     })
