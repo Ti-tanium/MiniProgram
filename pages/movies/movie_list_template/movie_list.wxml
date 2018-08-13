@@ -1,17 +1,19 @@
 <import src="../movie_grid_template/movie_grid.wxml" />
 <template name="movieList">
-  <view>
-    <view>
-      <text>正在热映</text>
-      <view>
-        <text>更多</text>
-        <image src="/images/icon/arrow-right.png"></image>
+  <view class="movieListContainer">
+    <view class="inner-container">
+      <view class="prompt">
+        <text class="catagory">正在热映</text>
+        <view class="more">
+          <text class="more-text">更多</text>
+          <image class="arrow-right" src="/images/icon/arrow-right.png"></image>
+        </view>
       </view>
-    </view>
-    <view>
-      <template is="movieGrid" />
-      <template is="movieGrid" />
-      <template is="movieGrid" />
+      <view class="movieContainer">
+        <template is="movieGrid" />
+        <template is="movieGrid" />
+        <template is="movieGrid" />
+      </view>
     </view>
   </view>
 </template>

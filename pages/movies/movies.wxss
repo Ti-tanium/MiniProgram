@@ -1,1 +1,5 @@
 /* pages/movies/movies.wxss */
+@import "/pages/movies/movie_list_template/movie_list.wxss";
+.container{
+  background-color: #f2f2f2;
+}

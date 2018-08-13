@@ -1,0 +1,24 @@
+.stars-container image{
+  width: 17rpx;
+  height: 17rpx;
+  margin-left: 3px;
+  /* padding-left: 3px; */
+}
+
+.mark{
+  color: #666;  
+  vertical-align: middle;
+}
+
+.star-template-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.stars-container{
+  display: flex;
+  flex-direction: row;
+  height: 17rpx;
+  margin-right: 24rpx;
+  padding-top: 7rpx;
+}

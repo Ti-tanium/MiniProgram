@@ -1,0 +1,45 @@
+@import "../movie_grid_template/movie_grid.wxss";
+
+.movieListContainer {
+  border: 1px solid #ededed;  
+  padding-bottom: 20rpx;
+  margin-bottom: 30rpx;
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.inner-container{
+  margin:0 auto 10rpx;
+}
+
+.prompt {
+  margin-bottom: 10rpx;
+  padding:5rpx 20rpx;
+}
+
+.catagory {
+  
+}
+
+.more {
+  float: right;
+}
+
+.more-text {
+  vertical-align: middle;
+  color: #1f4ba5;
+}
+
+.arrow-right {
+  width: 9rpx;
+  height: 16rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+
+.movieContainer {
+  display: flex;
+  flex-direction: row;
+}
