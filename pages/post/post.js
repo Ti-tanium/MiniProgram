@@ -78,6 +78,8 @@ Page({
     })    
   },
   onSwiperTap:function(event){
+    //target指的是当前点击的组件  image
+    //currentTarget指事件捕获的组件 swiper
     var postId=event.target.dataset.postid;
     wx.navigateTo({
       url: '/pages/post/post-detail/post-detail?id=' + postId,
