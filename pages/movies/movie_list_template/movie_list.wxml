@@ -3,16 +3,16 @@
   <view class="movieListContainer">
     <view class="inner-container">
       <view class="prompt">
-        <text class="catagory">正在热映</text>
-        <view class="more">
+        <text class="catagory">{{prompt}}</text>
+        <view catchtap="onMoreTap" class="more" data-catagory="{{prompt}}">
           <text class="more-text">更多</text>
           <image class="arrow-right" src="/images/icon/arrow-right.png"></image>
         </view>
       </view>
       <view class="movieContainer">
-        <template is="movieGrid" />
-        <template is="movieGrid" />
-        <template is="movieGrid" />
+        <block wx:for="{{movies}}" wx:for-item="movie">
+          <template is="movieGrid" data="{{...movie}}" />
+        </block>
       </view>
     </view>
   </view>
