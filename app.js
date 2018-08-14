@@ -2,7 +2,8 @@ App({
 
   globalData:{
     g_play:false,
-    g_currentPostId:null
+    g_currentPostId:null,
+    doubanBase:"http://t.yushu.im"
   },
 
   /**
