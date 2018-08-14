@@ -18,7 +18,6 @@
     <view catchtap="onPostTap" data-postid="{{it.post_id}}">
       <template is="postItem" data="{{it}}" />
     </view>
-
   </block>
 
 </view>
