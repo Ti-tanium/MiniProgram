@@ -15,8 +15,12 @@ Page({
    */
   onLoad: function (options) {
     var movieId=options.id;
-    var url=app.globalData.DoubanBase+"v2/movie/subject/"+movieId;
-    
+    var url=app.globalData.doubanBase+"v2/movie/subject/"+movieId;
+    util.getMovieListData(url,this.processDoubanData);
+  },
+
+  processDoubanData:function(res){
+    console.log(res);
   },
 
   /**
