@@ -15,3 +15,4 @@ function convertToStarsArray(stars){
 module.exports={
   convertToStarsArray:convertToStarsArray
 }
+

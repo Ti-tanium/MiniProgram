@@ -12,15 +12,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var kindId=options.id;
-    console.log(kindId);
+    var prompt=options.prompt;
+    this.data.prompt=prompt;
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    wx.setNavigationBarTitle({
+      title: this.data.prompt,
+    })
   },
 
   /**

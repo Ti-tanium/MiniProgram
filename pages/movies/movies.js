@@ -33,7 +33,6 @@ Page({
       },
       success: function(res) {
         that.processDoubanData(res.data,movieKind);
-        console.log(res.data)
       },
     })
   },
@@ -74,19 +73,8 @@ Page({
   },
   onMoreTap:function(event){
     var prompt=event.currentTarget.dataset.catagory;
-    console.log(prompt);
-    var kindId=-1;
-    if(prompt=="正在热映"){
-      kindId=0;
-    }
-    if(prompt=="即将上映"){
-      kindId=1;
-    }
-    if(prompt=="豆瓣前250"){
-      kindId=2;
-    }
     wx.navigateTo({
-      url: '/pages/movies/more_movies/more_movies?id='+kindId,
+      url: '/pages/movies/more_movies/more_movies?prompt='+prompt,
       success: function(res) {},
       fail: function(res) {},
       complete: function(res) {},
