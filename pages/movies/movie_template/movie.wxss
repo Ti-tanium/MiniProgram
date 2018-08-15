@@ -1,6 +1,6 @@
 @import "../stars_template/stars.wxss";
 
-.grid-container {
+.movie-container {
   display: flex;
   flex-direction: column;
   padding:0 22rpx;

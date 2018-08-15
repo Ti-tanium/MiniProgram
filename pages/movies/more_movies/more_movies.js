@@ -1,6 +1,6 @@
 // pages/movies/more_movies/more_movies.js
 var app = getApp();
-var util=require('../../../utils/util.js');
+var util = require('../../../utils/util.js');
 Page({
 
   /**
@@ -19,20 +19,20 @@ Page({
     var dataUrl = "";
     switch (prompt) {
       case "正在热映":
-        dataUrl = app.globalData.doubanBase + "/v2/movie/in_theaters";
+        dataUrl = app.globalData.doubanBase + "/v2/movie/in_theaters?start=0&count=12";
         break;
 
       case "即将上映":
-        dataUrl = app.globalData.doubanBase + "/v2/movie/coming_soon";
+        dataUrl = app.globalData.doubanBase + "/v2/movie/coming_soon?start=0&count=12";
         break;
       case "豆瓣前250":
-        dataUrl=app.globalData.doubanBase + "/v2/movie/top250";
+        dataUrl = app.globalData.doubanBase + "/v2/movie/top250?start=0&count=12";
         break;
     }
-    util.getMovieListData(dataUrl,this.processDoubanData);
+    util.getMovieListData(dataUrl, this.processDoubanData);
   },
 
-  processDoubanData: function (moviesDouban) {
+  processDoubanData: function(moviesDouban) {
     var movies = [];
     for (var idx in moviesDouban.subjects) {
       var subject = moviesDouban.subjects[idx];
@@ -50,7 +50,7 @@ Page({
       movies.push(temp);
     }
     this.setData({
-      movies:movies
+      movies: movies
     });
   },
 
