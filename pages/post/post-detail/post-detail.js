@@ -68,6 +68,14 @@ Page({
       app.globalData.g_play = false;    
       app.globalData.g_currentPostId=null;
     });
+
+    wx.onBackgroundAudioStop(function () {
+      that.setData({
+        play: false
+      });
+      app.globalData.g_play = false;
+      app.globalData.g_currentPostId = null;
+    });
   },
 
   /**
