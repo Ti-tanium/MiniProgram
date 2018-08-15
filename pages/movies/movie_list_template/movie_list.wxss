@@ -1,4 +1,4 @@
-@import "../movie_grid_template/movie_grid.wxss";
+@import "../movie_template/movie.wxss";
 
 .movieListContainer {
   border: 1px solid #ededed;  
