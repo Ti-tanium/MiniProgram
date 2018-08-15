@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    totalCount: 0,
+    movies: []
   },
 
   /**
@@ -19,17 +20,25 @@ Page({
     var dataUrl = "";
     switch (prompt) {
       case "正在热映":
-        dataUrl = app.globalData.doubanBase + "/v2/movie/in_theaters?start=0&count=12";
+        dataUrl = app.globalData.doubanBase + "/v2/movie/in_theaters";
         break;
 
       case "即将上映":
-        dataUrl = app.globalData.doubanBase + "/v2/movie/coming_soon?start=0&count=12";
+        dataUrl = app.globalData.doubanBase + "/v2/movie/coming_soon";
         break;
       case "豆瓣前250":
-        dataUrl = app.globalData.doubanBase + "/v2/movie/top250?start=0&count=12";
+        dataUrl = app.globalData.doubanBase + "/v2/movie/top250";
         break;
     }
     util.getMovieListData(dataUrl, this.processDoubanData);
+    this.data.requestUrl = dataUrl;
+    this.data.totalCount += 20;
+  },
+
+  onScrollLower: function(event) {
+    var nextUrl = this.data.requestUrl + "?start=" + this.data.totalCount + "&count=20";
+    util.getMovieListData(nextUrl, this.processDoubanData);
+    this.data.totalCount += 20;
   },
 
   processDoubanData: function(moviesDouban) {
@@ -49,8 +58,9 @@ Page({
       }
       movies.push(temp);
     }
+    var totalMovies = this.data.movies.concat(movies);
     this.setData({
-      movies: movies
+      movies: totalMovies
     });
   },
 
