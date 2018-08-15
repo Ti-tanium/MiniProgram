@@ -26,7 +26,7 @@ Page({
         dataUrl = app.globalData.doubanBase + "/v2/movie/coming_soon";
         break;
       case "豆瓣前250":
-        app.globalData.doubanBase + "/v2/movie/top250";
+        dataUrl=app.globalData.doubanBase + "/v2/movie/top250";
         break;
     }
     util.getMovieListData(dataUrl,this.processDoubanData);

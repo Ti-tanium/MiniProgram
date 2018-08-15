@@ -1,5 +1,5 @@
 <!--pages/movies/more_movies/more_movies.wxml-->
-<import src="../movie_grid_template/movie_grid.wxml"/>
+<import src="../movie_grid_template/movie_grid.wxml" />
 <block>
+  <template is="movieGrid" data="{{movies}}" />
 </block>
-<template is="movieGrid" data="{{movies}}"/>
