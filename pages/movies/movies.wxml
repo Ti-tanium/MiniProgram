@@ -13,6 +13,6 @@
     <template is="movieList" data="{{...top250}}" />
   </view>
   <view hidden='{{searchHidden}}'>
-    <template is="movieGrid"/>
+    <template is="movieGrid" data="{{...searchResult}}"/>
   </view>
 </view>

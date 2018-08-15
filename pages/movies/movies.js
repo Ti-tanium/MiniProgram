@@ -48,7 +48,8 @@ Page({
   onConfirm: function(event) {
     var text=event.detail.value;
     console.log(text);
-
+    var searchUrl=app.globalData.doubanBase+"/v2/movie/search?q="+text;
+    this.getMovieListData(searchUrl,"searchResult");
   },
 
   onClearTap: function() {
@@ -76,12 +77,12 @@ Page({
       movies.push(temp);
     }
     var readyData = {};
-    var prompt;
+    var prompt="";
     if (movieKind == "inTheaters") {
       prompt = "正在热映";
     } else if (movieKind == "comingSoon") {
       prompt = "即将上映";
-    } else {
+    } else if(movieKind=="top250"){
       prompt = "豆瓣前250";
     }
     readyData[movieKind] = {
