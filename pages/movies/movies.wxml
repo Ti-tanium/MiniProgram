@@ -1,7 +1,18 @@
 <!--pages/movies/movies.wxml-->
 <import src="movie_list_template/movie_list.wxml" />
+<import src="movie_grid_template/movie_grid.wxml" />
 <view class="container">
-  <template is="movieList" data="{{...inTheaters}}"/>
-  <template is="movieList" data="{{...comingSoon}}"/>
-  <template is="movieList" data="{{...top250}}"/>
+  <view class="search">
+    <icon type="search" size='13' color='#405f80' class='search-img'></icon>
+    <input type='text' placeholder='后来的我们' placeholder-class='placeholder' bindfocus='onFocus' bindconfirm='onConfirm'></input>
+    <icon type='clear' size='16' class='clear-img' catchtap='onClearTap' hidden='{{searchHidden}}'></icon>
+  </view>
+  <view hidden='{{pageHidden}}'>
+    <template is="movieList" data="{{...inTheaters}}" />
+    <template is="movieList" data="{{...comingSoon}}" />
+    <template is="movieList" data="{{...top250}}" />
+  </view>
+  <view hidden='{{searchHidden}}'>
+    <template is="movieGrid"/>
+  </view>
 </view>

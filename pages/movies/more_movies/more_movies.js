@@ -66,6 +66,7 @@ Page({
       movies: totalMovies
     });
     wx.hideLoading();
+    wx.stopPullDownRefresh();
   },
 
   /**
@@ -102,7 +103,11 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-
+    var refreshUrl=this.data.requestUrl+"?start=0&count="+this.data.totalCount;
+    this.setData({
+      movies:[]
+    });
+    util.getMovieListData(refreshUrl,this.processDoubanData);
   },
 
   /**
