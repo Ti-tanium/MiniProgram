@@ -35,8 +35,11 @@ Page({
     this.data.totalCount += 20;
   },
 
-  onScrollLower: function(event) {
+  onScrollLower: function (event) {
     var nextUrl = this.data.requestUrl + "?start=" + this.data.totalCount + "&count=20";
+    wx.showLoading({
+      title: '正在加载',
+    })
     util.getMovieListData(nextUrl, this.processDoubanData);
     this.data.totalCount += 20;
   },
@@ -62,6 +65,7 @@ Page({
     this.setData({
       movies: totalMovies
     });
+    wx.hideLoading();
   },
 
   /**

@@ -7,7 +7,7 @@
     "pages/movies/more_movies/more_movies"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#b3da32"
+    "navigationBarBackgroundColor": "#b3da32"  
   },
   "tabBar": {
     "list": [
