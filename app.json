@@ -4,10 +4,11 @@
     "pages/post/post",
     "pages/post/post-detail/post-detail",
     "pages/movies/movies",
-    "pages/movies/more_movies/more_movies"
+    "pages/movies/more_movies/more_movies",
+    "pages/movies/movie_detail/movie_detail"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#b3da32"  
+    "navigationBarBackgroundColor": "#b3da32"
   },
   "tabBar": {
     "list": [

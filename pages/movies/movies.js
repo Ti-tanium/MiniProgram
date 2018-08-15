@@ -102,6 +102,16 @@ Page({
     })
   },
 
+  onMovieTap:function(event){
+    var movieId=event.currentTarget.dataset.movieid;
+    wx.navigateTo({
+      url: '/pages/movies/movie_detail/movie_detail?id='+movieId,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

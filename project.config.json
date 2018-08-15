@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -50,7 +50,13 @@
 				{
 					"id": -1,
 					"name": "movies",
-					"pathName": "pages/movies/movies"
+					"pathName": "pages/movies/movies",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "movie-detail",
+					"pathName": "pages/movies/movie_detail/movie_detail"
 				}
 			]
 		}
