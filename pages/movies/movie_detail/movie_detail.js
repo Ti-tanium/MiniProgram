@@ -37,23 +37,30 @@ Page({
         title: res.title,
         originalTitle: res.original_title,
         image: res.images.large,
-        average:res.rating.average,
+        average: res.rating.average,
         stars: util.convertToStarsArray(res.rating.stars),
         country: res.countries[0],
         wishCount: res.wish_count,
-        commentCount:res.comments_count,
+        commentCount: res.comments_count,
         year: res.year,
         genres: res.genres.join("、"),
         castsName: util.concatCastsName(res.casts),
         castsInfo: util.getCastsInfo(res.casts),
-        summary: res.summary==""?"暂无简介":res.summary,
-        directorName:director.name
+        summary: res.summary == "" ? "暂无简介" : res.summary,
+        directorName: director.name
       }
       console.log(movie);
       this.setData({
         movie: movie
       });
     }
+  },
+
+  viewPictureTap: function(event) {
+    var src = event.currentTarget.dataset.src;
+    wx.previewImage({
+      urls: [src] //需要预览的图片的http链接列表
+    })
   },
 
   /**

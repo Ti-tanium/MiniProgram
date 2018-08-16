@@ -1,7 +1,7 @@
 <!--pages/movies/movie_detail/movie_detail.wxml-->
 <import src='/pages/movies/stars_template/stars.wxml' />
 <view class="movie-detail-container">
-  <image class="head-img" src="{{movie.image}}" mode='aspectFill' />
+  <image class="head-img" src="{{movie.image}}" mode='aspectFill' data-src="{{movie.image}}" catchtap='viewPictureTap' />
   <view class="head-img-hover">
     <text class="main-title">{{movie.title}}</text>
     <text class="sub-title">{{movie.country+"."+movie.year}}</text>
@@ -20,7 +20,7 @@
       </text>
     </view>
   </view>
-  <image class="movie-img" src="{{movie.image}}" mode='aspectFit'></image>
+  <image class="movie-img" src="{{movie.image}}" mode='aspectFit' data-src="{{movie.image}}" catchtap='viewPictureTap'></image>
   <view class='content-block' id='summary'>
     <text class="originalTitle">{{movie.originalTitle}}</text>
     <view class="comment">
