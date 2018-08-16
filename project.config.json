@@ -54,9 +54,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "movie-detail",
-					"pathName": "pages/movies/movie_detail/movie_detail"
+					"pathName": "pages/movies/movie_detail/movie_detail",
+					"query": "id=321"
 				}
 			]
 		}

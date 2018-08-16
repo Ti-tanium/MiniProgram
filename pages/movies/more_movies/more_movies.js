@@ -35,6 +35,16 @@ Page({
     this.data.totalCount += 20;
   },
 
+  onMovieTap: function (event) {
+    var movieId = event.currentTarget.dataset.movieid;
+    wx.navigateTo({
+      url: '/pages/movies/movie_detail/movie_detail?id=' + movieId,
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  },
+
   onScrollLower: function (event) {
     var nextUrl = this.data.requestUrl + "?start=" + this.data.totalCount + "&count=20";
     wx.showLoading({

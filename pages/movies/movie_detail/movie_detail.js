@@ -20,7 +20,6 @@ Page({
   },
 
   processDoubanData: function(res) {
-    console.log(res);
     if (res != null) {
       var director = {
         avatar: "",
@@ -38,15 +37,17 @@ Page({
         title: res.title,
         originalTitle: res.original_title,
         image: res.images.large,
-        average: res.rating.average,
-        stars: res.rating.stars,
+        average:res.rating.average,
+        stars: util.convertToStarsArray(res.rating.stars),
         country: res.countries[0],
         wishCount: res.wish_count,
+        commentCount:res.comments_count,
         year: res.year,
         genres: res.genres.join("、"),
         castsName: util.concatCastsName(res.casts),
-        castsAvatar: util.getCastsInfo(res.casts),
-        summary: res.summary
+        castsInfo: util.getCastsInfo(res.casts),
+        summary: res.summary==""?"暂无简介":res.summary,
+        directorName:director.name
       }
       console.log(movie);
       this.setData({
