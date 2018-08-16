@@ -25,8 +25,31 @@ function getMovieListData(url,callback) {
   })
 }
 
+function concatCastsName(casts){
+  var res=[];
+  for(var idx in casts){
+    res.push(casts[idx].name);
+  }
+  return res.join("/");
+}
+
+//从casts中得到cast的img url 与 name
+function getCastsInfo(casts){
+  var castsInfo=[];
+  for(var idx in casts){
+    var cast={
+      img:casts[idx].avatars?casts[idx].avatars:"",
+      name:casts[idx].name
+    }
+    castsInfo.push(cast);
+  }
+  return castsInfo;
+}
+
 module.exports={
   convertToStarsArray:convertToStarsArray,
-  getMovieListData: getMovieListData
+  getMovieListData: getMovieListData,
+  concatCastsName: concatCastsName,
+  getCastsInfo: getCastsInfo
 }
 
