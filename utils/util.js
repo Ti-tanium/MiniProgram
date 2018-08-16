@@ -35,10 +35,11 @@ function concatCastsName(casts){
 
 //从casts中得到cast的img url 与 name
 function getCastsInfo(casts){
+  console.log(casts);
   var castsInfo=[];
   for(var idx in casts){
     var cast={
-      img:casts[idx].avatars?casts[idx].avatars:"",
+      img:casts[idx].avatars.large?casts[idx].avatars.large:"",
       name:casts[idx].name
     }
     castsInfo.push(cast);
